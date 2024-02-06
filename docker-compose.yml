@@ -5,7 +5,7 @@ services:
       context: .
     command: --check-caps false
     hostname: "key-column-value"
-    container_name: "key-column-valu"
+    container_name: "key-column-value"
     ports: 
       - 60100:52773
     volumes:
