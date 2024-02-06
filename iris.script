@@ -1,4 +1,7 @@
     // Unexpire passwords to simplify dev mode. Comment these two lines for Production use
     zn "%SYS"
     Do ##class(Security.Users).UnExpireUserPasswords("*")
+    zn "irisapp"
+    do $system.OBJ.LoadDir("/home/irisowner/irisbuild/src","ck",,1)
+    do ##class(data.result3).init(10000)
     halt

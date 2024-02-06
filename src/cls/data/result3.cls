@@ -57,7 +57,6 @@ ClassMethod init(nb As %Integer = 1000, reset As %Boolean = 1) As %Status
     if reset {
         set sc = ..%KillExtent()
         set nbColumns = ##class(data.column).init()
-        kill ^backupdata.resultD,^backupdata.resultI,^backupdata.resultS
     }
     set rs = ##class(%SQL.Statement).%ExecDirect(,"select name from data.column")
     set columnList = ""
