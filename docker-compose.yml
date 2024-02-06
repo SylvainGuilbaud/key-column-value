@@ -1,0 +1,15 @@
+version: '3.6'
+services:
+  iris:
+    build: 
+      context: .
+    command: --check-caps false
+    hostname: "key-column-value"
+    container_name: "key-column-valu"
+    ports: 
+      - 60100:52773
+    volumes:
+      - ./data:/data
+    #   - ./irisdata:/irisdata
+    # environment:
+    #   - ISC_DATA_DIRECTORY=/irisdata
