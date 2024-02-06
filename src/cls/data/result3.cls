@@ -9,10 +9,6 @@ Property value As %String(MAXLEN = "", POPSPEC = "##class(data.result).popValue(
 
 Property inserted As %TimeStamp [ InitialExpression = {$zdt($h,3)}, Required ];
 
-Property histomodif As array Of %TimeStamp;
-
-Property results2 As array Of data.result2;
-
 Index keyColumn On (key, column) [ Data = value, Unique ];
 
 Index columnBitmap On column [ Type = bitmap ];
